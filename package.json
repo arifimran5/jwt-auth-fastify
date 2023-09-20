@@ -1,0 +1,30 @@
+{
+  "name": "jwt-auth-fastify",
+  "version": "1.0.0",
+  "description": "",
+  "main": "src/app.ts",
+  "scripts": {
+    "dev": "tsx watch src/app.ts",
+    "build": "tsc -p tsconfig.json",
+    "start": "node dist/app.js"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "@fastify/cookie": "^9.1.0",
+    "@fastify/jwt": "^7.2.1",
+    "@prisma/client": "5.3.1",
+    "bcrypt": "^5.1.1",
+    "fastify": "^4.23.2",
+    "fastify-zod": "^1.4.0",
+    "zod": "^3.22.2"
+  },
+  "devDependencies": {
+    "@types/bcrypt": "^5.0.0",
+    "@types/node": "^20.6.3",
+    "prisma": "^5.3.1",
+    "tsx": "^3.12.10",
+    "typescript": "^5.2.2"
+  }
+}
