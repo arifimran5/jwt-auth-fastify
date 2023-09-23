@@ -22,7 +22,7 @@ const loginSchema = z.object({
       invalid_type_error: 'Email must be a string',
     })
     .email(),
-  password: z.string(),
+  password: z.string().min(6),
 })
 export type LoginUserInput = z.infer<typeof loginSchema>
 
