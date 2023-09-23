@@ -10,7 +10,7 @@ app.get('/healthcheck', (req, res) => {
   res.send({ message: 'Success' })
 })
 
-for (let scheam of [...userSchemas]) app.addSchema(scheam)
+for (let schema of [...userSchemas]) app.addSchema(schema)
 
 // jwt
 app.register(fjwt, { secret: 'supersecretcode-CHANGE_THIS-USE_ENV_FILE' })

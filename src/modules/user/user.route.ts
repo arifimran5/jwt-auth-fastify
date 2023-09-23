@@ -9,19 +9,19 @@ export async function userRoutes(app: FastifyInstance) {
       preHandler: [app.authenticate],
     },
     getUsers
-  ),
-    app.post(
-      '/register',
-      {
-        schema: {
-          body: $ref('createUserSchema'),
-          response: {
-            201: $ref('createUserResponseSchema'),
-          },
+  )
+  app.post(
+    '/register',
+    {
+      schema: {
+        body: $ref('createUserSchema'),
+        response: {
+          201: $ref('createUserResponseSchema'),
         },
       },
-      createUser
-    )
+    },
+    createUser
+  )
   app.post(
     '/login',
     {
